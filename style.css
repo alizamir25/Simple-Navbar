@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* reset button */
 button {
     appearance: none;
     background-color: transparent;
@@ -20,7 +19,6 @@ button {
     line-height: normal;
     overflow: visible;
 }
-
 body{
     min-height: 100svh;
     background-color: rgb(15, 23, 42);
@@ -30,7 +28,6 @@ body{
     font-size: 1rem;
     font-family: system-ui;
 }
-
 nav {
     --_clr-txt: rgb(255, 255, 255);
     --_clr-txt-svg: rgb(147, 158, 184);
@@ -50,31 +47,24 @@ nav>button {
     text-transform: uppercase;
     font-weight: 300;
 }
-
-/* place button items on top of each other */
 nav>button>span {
     transition: all 300ms ease-in-out;
     grid-area: stack;
 }
-/* nav icon */
 nav>button>span:last-of-type {
     margin-top: 0.25rem;
     transform: scale(0);
     transition-delay: 0ms;
     border-radius: 50%;
 }
-/* hover - hide text */
 nav>button:focus-visible>span:first-of-type,
 nav>button:hover>span:first-of-type {
     transform: scale(0);
 }
-/* hover - reveal icon */
 nav>button:focus-visible>span:last-of-type,
 nav>button:hover>span:last-of-type {
     transform: scale(1);
 }
-
-/* nav SVG circular text*/
 nav>button>svg {
     position: absolute;
     width: 200px;
@@ -88,7 +78,6 @@ nav>button>svg {
     transition: all 300ms ease-in-out;
     color: var(--_clr-txt-svg);
 }
-/* hover - reveal rotating SVG */
 nav>button:focus-visible>svg,
 nav>button:hover>svg {
     transform: translate(-50%, -50%) scale(1);
@@ -96,25 +85,10 @@ nav>button:hover>svg {
     transition-delay: 150ms;
     transition: all 300ms ease-in-out;
 }
-/*
-@supports (-webkit-touch-callout: none) {
-  /* specific to iOS devices * / 
-  button svg {
-      /* adjust position for iOS * /
-      translate: -50% -50%;
-      animation: rotate var(--_ani-speed) linear infinite;
-  }
-}
-@supports not (-webkit-touch-callout: none) {
- */
-
-
  button svg g {
     transform-origin: center;
     animation: rotate var(--_ani-speed) linear infinite;
  }
-
-
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
