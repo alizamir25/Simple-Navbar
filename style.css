@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-button {
+button{
     appearance: none;
     background-color: transparent;
     border: none;
@@ -28,7 +28,7 @@ body{
     font-size: 1rem;
     font-family: system-ui;
 }
-nav {
+nav{
     --_clr-txt: rgb(255, 255, 255);
     --_clr-txt-svg: rgb(147, 158, 184);
     --_ani-speed: 6s; /* speed of rotating text */
@@ -38,7 +38,7 @@ nav {
     gap: 1rem;
     font-size: 1.4rem;
 }
-nav>button {
+nav>button{
     position: relative;
     display: grid;
     place-content: center;
@@ -47,25 +47,25 @@ nav>button {
     text-transform: uppercase;
     font-weight: 300;
 }
-nav>button>span {
+nav>button>span{
     transition: all 300ms ease-in-out;
     grid-area: stack;
 }
-nav>button>span:last-of-type {
+nav>button>span:last-of-type{
     margin-top: 0.25rem;
     transform: scale(0);
     transition-delay: 0ms;
     border-radius: 50%;
 }
 nav>button:focus-visible>span:first-of-type,
-nav>button:hover>span:first-of-type {
+nav>button:hover>span:first-of-type{
     transform: scale(0);
 }
 nav>button:focus-visible>span:last-of-type,
-nav>button:hover>span:last-of-type {
+nav>button:hover>span:last-of-type{
     transform: scale(1);
 }
-nav>button>svg {
+nav>button>svg{
     position: absolute;
     width: 200px;
     height: 200px;
@@ -79,17 +79,17 @@ nav>button>svg {
     color: var(--_clr-txt-svg);
 }
 nav>button:focus-visible>svg,
-nav>button:hover>svg {
+nav>button:hover>svg{
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     transition-delay: 150ms;
     transition: all 300ms ease-in-out;
 }
- button svg g {
+ button svg g{
     transform-origin: center;
     animation: rotate var(--_ani-speed) linear infinite;
  }
-@keyframes rotate {
+@keyframes rotate{
     0% {
         transform: rotate(0deg);
     }
