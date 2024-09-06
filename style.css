@@ -32,7 +32,6 @@ nav{
     --_clr-txt: rgb(255, 255, 255);
     --_clr-txt-svg: rgb(147, 158, 184);
     --_ani-speed: 6s; 
-
     display: flex;
     gap: 1rem;
     font-size: 1.4rem;
