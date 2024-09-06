@@ -88,10 +88,10 @@ nav>button:hover>svg{
     animation: rotate var(--_ani-speed) linear infinite;
  }
 @keyframes rotate{
-    0% {
+    0%{
         transform: rotate(0deg);
     }
-    100% {
+    100%{
         transform: rotate(360deg);
     }
 }
